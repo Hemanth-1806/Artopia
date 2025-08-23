@@ -1,0 +1,25 @@
+{
+  "name": "Artopia - Artist Community",
+  "short_name": "Artopia",
+  "description": "Connect with artists and share your creative journey",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#FF6B6B",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "orientation": "portrait-primary",
+  "categories": ["social", "photo", "entertainment"]
+}
