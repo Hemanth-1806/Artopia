@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Amazon Login</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: white; display: flex; flex-direction: column; align-items: center; padding-top: 20px; }
+        .logo { font-size: 28px; font-weight: bold; margin-bottom: 20px; }
+        .login-box { border: 1px solid #ddd; border-radius: 4px; padding: 20px 26px; width: 350px; }
+        h1 { font-size: 28px; font-weight: 400; margin-bottom: 20px; }
+        label { font-size: 13px; font-weight: bold; display: block; margin-bottom: 5px; }
+        input { width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #a6a6a6; border-radius: 3px; }
+        .btn { width: 100%; padding: 10px; background: #f0c14b; border: 1px solid #a88734; border-radius: 3px; cursor: pointer; }
+        .divider { text-align: center; margin: 20px 0; font-size: 12px; color: #767676; position: relative; }
+        .divider:before { content: ""; border-top: 1px solid #e7e7e7; position: absolute; top: 50%; width: 100%; z-index: -1; left: 0; }
+        .register-btn { width: 100%; padding: 10px; background: #e7e9ec; border: 1px solid #adb1b8; border-radius: 3px; cursor: pointer; margin-top: 10px; }
+    </style>
+</head>
+<body>
+
+    <div class="logo">BookStore</div>
+
+    <div class="login-box">
+        <h1>Sign-In</h1>
+        <form action="Profile.html"> <label for="email">Email or mobile phone number</label>
+            <input type="text" id="email" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" required>
+
+            <button type="submit" class="btn">Sign In</button>
+        </form>
+
+        <p style="font-size: 12px; margin-top: 15px;">
+            By continuing, you agree to BookStore's Conditions of Use and Privacy Notice.
+        </p>
+    </div>
+
+    <div style="width: 350px;">
+        <div class="divider">New to BookStore?</div>
+        <button class="register-btn" onclick="alert('Registration Logic Here')">Create your Amazon account</button>
+    </div>
+
+</body>
+</html>

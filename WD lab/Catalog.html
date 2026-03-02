@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Catalog</title>
+    <style>
+        * { box-sizing: border-box; font-family: Arial, sans-serif; }
+        body { background-color: #fff; }
+        /* Header CSS shortened for brevity - copy from Index if needed */
+        header { background-color: #131921; color: white; padding: 10px; }
+        .main-layout { display: flex; padding: 20px; }
+        .sidebar { width: 250px; padding-right: 20px; border-right: 1px solid #ddd; }
+        .sidebar h4 { margin-top: 10px; }
+        .sidebar ul { list-style: none; padding: 0; }
+        .sidebar li { margin-bottom: 5px; color: #007185; cursor: pointer; }
+        
+        .results { flex-grow: 1; padding-left: 20px; }
+        .book-item { display: flex; border: 1px solid #eee; padding: 10px; margin-bottom: 10px; border-radius: 4px; }
+        .book-item img { height: 180px; width: 120px; object-fit: cover; margin-right: 20px; }
+        .book-info h2 { font-size: 18px; color: #007185; }
+        .price { font-size: 20px; font-weight: bold; margin: 10px 0; }
+        .add-btn { background-color: #f0c14b; border: 1px solid #a88734; padding: 8px 15px; border-radius: 20px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <header>
+        <h3><a href="index.html" style="color:white; text-decoration:none;">BookStore Catalog</a></h3>
+    </header>
+
+    <div class="main-layout">
+        <div class="sidebar">
+            <h4>Department</h4>
+            <ul>
+                <li>Books</li>
+                <li>Literature & Fiction</li>
+                <li>Computers & Tech</li>
+                <li>Sci-Fi & Fantasy</li>
+            </ul>
+            <h4>Avg. Customer Review</h4>
+            <ul>
+                <li>⭐⭐⭐⭐ & Up</li>
+                <li>⭐⭐⭐ & Up</li>
+            </ul>
+        </div>
+
+        <div class="results">
+            <h2>Results</h2>
+            
+            <div class="book-item">
+                <img src="https://via.placeholder.com/120x180?text=Book+1" alt="Cover">
+                <div class="book-info">
+                    <h2>The Great Algorithm</h2>
+                    <p>by John Doe | 2024</p>
+                    <div class="price">$29.99</div>
+                    <button class="add-btn" onclick="window.location.href='cart.html'">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <img src="https://via.placeholder.com/120x180?text=Book+2" alt="Cover">
+                <div class="book-info">
+                    <h2>Web Design Masters</h2>
+                    <p>by Jane Smith | 2023</p>
+                    <div class="price">$45.00</div>
+                    <button class="add-btn" onclick="window.location.href='Cart.html'">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

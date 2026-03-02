@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Clone Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="player">
+        <div class="img-container">
+            <img src="cover.png" alt="Album Art" id="cover">
+        </div>
+        
+        <div class="song-info">
+            <h2 id="title">Select a song</h2>
+            <h3 id="artist">Artist</h3>
+        </div>
+
+        <audio id="audio" src=""></audio>
+
+        <div class="progress-container">
+            <input type="range" id="progress" value="0" max="100">
+            <div class="time-codes">
+                <span id="current-time">0:00</span>
+                <span id="duration">0:00</span>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="prev" class="action-btn">Prev</button>
+            <button id="play" class="play-btn">Play</button>
+            <button id="next" class="action-btn">Next</button>
+        </div>
+
+        <div class="playlist-container">
+            <ul id="playlist"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

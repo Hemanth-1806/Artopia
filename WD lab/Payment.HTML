@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Checkout - Payment</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: white; }
+        header { background: linear-gradient(to bottom, #f7f7f7, #eaeaea); border-bottom: 1px solid #ddd; padding: 15px; text-align: center; }
+        .container { max-width: 800px; margin: 0 auto; padding: 30px; }
+        .section-title { color: #c45500; font-weight: bold; font-size: 18px; margin-bottom: 10px; border-bottom: 1px solid #ddd; padding-bottom: 10px; }
+        
+        .form-group { margin-bottom: 15px; }
+        label { font-weight: bold; font-size: 14px; display: block; margin-bottom: 5px; }
+        input { padding: 8px; width: 60%; border: 1px solid #ccc; border-radius: 3px; }
+        
+        .order-summary { border: 1px solid #ddd; padding: 20px; border-radius: 5px; background-color: #fcfcfc; margin-top: 20px; }
+        .place-order-btn { background-color: #f0c14b; border: 1px solid #a88734; padding: 12px 20px; border-radius: 4px; cursor: pointer; font-size: 14px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Checkout (2 items)</h2>
+    </header>
+
+    <div class="container">
+        <h3 class="section-title">1. Payment method</h3>
+        
+        <div style="border: 1px solid #ccc; padding: 20px; border-radius: 4px;">
+            <h4>Credit or Debit Cards</h4>
+            
+            <div class="form-group">
+                <label>Card Number</label>
+                <input type="text" placeholder="0000 0000 0000 0000">
+            </div>
+            <div class="form-group">
+                <label>Name on Card</label>
+                <input type="text">
+            </div>
+            <div class="form-group">
+                <label>Expiration Date</label>
+                <input type="text" placeholder="MM/YY" style="width: 100px;">
+            </div>
+        </div>
+
+        <div class="order-summary">
+            <h3>Order Summary</h3>
+            <p>Items: $74.99</p>
+            <p>Shipping: $5.00</p>
+            <p>Tax: $4.00</p>
+            <h3 style="color: #B12704;">Order Total: $83.99</h3>
+            <br>
+            <button class="place-order-btn" onclick="window.location.href='Confirmation.html'">Place your order</button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Account</title>
+    <style>
+        * { box-sizing: border-box; font-family: Arial, sans-serif; }
+        body { background-color: white; }
+        header { background-color: #131921; color: white; padding: 10px 20px; display: flex; align-items: center; justify-content: space-between; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
+        h1 { font-weight: 400; margin-bottom: 20px; }
+        .options-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        .option-card { border: 1px solid #d5d9d9; border-radius: 8px; padding: 20px; display: flex; gap: 15px; cursor: pointer; }
+        .option-card:hover { background-color: #f0f2f2; }
+        .icon { font-size: 30px; }
+        .text h3 { font-size: 16px; margin-bottom: 5px; }
+        .text p { font-size: 12px; color: #565959; }
+    </style>
+</head>
+<body>
+    <header>
+        <div style="font-weight:bold; font-size: 20px;"><a href="index.html" style="color:white; text-decoration:none;">BookStore</a></div>
+        <div>Your Account</div>
+    </header>
+
+    <div class="container">
+        <h1>Your Account</h1>
+        <div class="options-grid">
+            <div class="option-card" onclick="window.location.href='Cart.html'">
+                <div class="icon">📦</div>
+                <div class="text">
+                    <h3>Your Orders</h3>
+                    <p>Track, return, or buy things again</p>
+                </div>
+            </div>
+            <div class="option-card">
+                <div class="icon">🔒</div>
+                <div class="text">
+                    <h3>Login & security</h3>
+                    <p>Edit login, name, and mobile number</p>
+                </div>
+            </div>
+            <div class="option-card">
+                <div class="icon">📍</div>
+                <div class="text">
+                    <h3>Your Addresses</h3>
+                    <p>Edit addresses for orders</p>
+                </div>
+            </div>
+            <div class="option-card">
+                <div class="icon">💳</div>
+                <div class="text">
+                    <h3>Payment options</h3>
+                    <p>Edit or add payment methods</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

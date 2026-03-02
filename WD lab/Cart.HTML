@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shopping Cart</title>
+    <style>
+        * { box-sizing: border-box; font-family: Arial, sans-serif; }
+        body { background-color: #eaeded; }
+        header { background-color: #131921; color: white; padding: 10px; }
+        .cart-container { display: flex; max-width: 1200px; margin: 20px auto; gap: 20px; }
+        
+        .cart-items { flex: 3; background: white; padding: 20px; }
+        .checkout-box { flex: 1; background: white; padding: 20px; height: fit-content; }
+        
+        .cart-item { display: flex; border-bottom: 1px solid #ddd; padding-bottom: 20px; margin-bottom: 20px; }
+        .cart-item img { width: 100px; margin-right: 20px; }
+        .title { color: #007185; font-weight: bold; font-size: 18px; }
+        .price { font-weight: bold; color: #B12704; }
+        
+        .checkout-btn { width: 100%; background-color: #f0c14b; border: 1px solid #a88734; padding: 10px; border-radius: 8px; cursor: pointer; margin-top: 15px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h3><a href="index.html" style="color:white; text-decoration:none;">BookStore</a></h3>
+    </header>
+
+    <div class="cart-container">
+        <div class="cart-items">
+            <h1>Shopping Cart</h1>
+            <p align="right">Price</p>
+            <hr>
+            
+            <div class="cart-item">
+                <img src="https://via.placeholder.com/100x150?text=Book+1" alt="Book">
+                <div style="flex-grow:1;">
+                    <div class="title">The Great Algorithm</div>
+                    <p>In Stock</p>
+                    <p>Qty: <select><option>1</option><option>2</option></select> | <a href="#" style="color:#007185;">Delete</a></p>
+                </div>
+                <div class="price">$29.99</div>
+            </div>
+
+            <div class="cart-item">
+                <img src="https://via.placeholder.com/100x150?text=Book+2" alt="Book">
+                <div style="flex-grow:1;">
+                    <div class="title">Web Design Masters</div>
+                    <p>In Stock</p>
+                    <p>Qty: <select><option>1</option></select> | <a href="#" style="color:#007185;">Delete</a></p>
+                </div>
+                <div class="price">$45.00</div>
+            </div>
+            
+            <h3 align="right">Subtotal (2 items): $74.99</h3>
+        </div>
+
+        <div class="checkout-box">
+            <h3>Subtotal (2 items): $74.99</h3>
+            <button class="checkout-btn" onclick="window.location.href='Payment.html'">Proceed to checkout</button>
+        </div>
+    </div>
+</body>
+</html>

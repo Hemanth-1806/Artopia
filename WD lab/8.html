@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3-in-1 JavaScript Utility</title>
+    <style>
+        /* CSS: Styling the Interface */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 450px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #2d3436;
+            margin-bottom: 25px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        .section {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #f0f0f0;
+            border-radius: 8px;
+            transition: transform 0.2s;
+        }
+
+        .section:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #636e72;
+            font-size: 0.9rem;
+        }
+
+        .input-wrapper {
+            display: flex;
+            gap: 10px;
+        }
+
+        input {
+            flex: 1;
+            padding: 10px;
+            border: 2px solid #dfe6e9;
+            border-radius: 6px;
+            outline: none;
+            font-size: 14px;
+        }
+
+        input:focus {
+            border-color: #0984e3;
+        }
+
+        button {
+            background-color: #0984e3;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        button:hover {
+            background-color: #74b9ff;
+        }
+
+        .result-text {
+            margin-top: 10px;
+            font-size: 0.85rem;
+            min-height: 1.2rem;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>JS Utility Lab</h2>
+
+        <div class="section">
+            <label>A. Test First Char Uppercase</label>
+            <div class="input-wrapper">
+                <input type="text" id="caseInput" placeholder="Enter text...">
+                <button onclick="testUppercase()">Run</button>
+            </div>
+            <div id="caseRes" class="result-text"></div>
+        </div>
+
+        <div class="section">
+            <label>B. Email Pattern Matcher</label>
+            <div class="input-wrapper">
+                <input type="text" id="emailInput" placeholder="user@example.com">
+                <button onclick="testEmail()">Run</button>
+            </div>
+            <div id="emailRes" class="result-text"></div>
+        </div>
+
+        <div class="section">
+            <label>C. Thousands Separator</label>
+            <div class="input-wrapper">
+                <input type="number" id="numInput" placeholder="e.g. 1000000">
+                <button onclick="testFormat()">Run</button>
+            </div>
+            <div id="numRes" class="result-text"></div>
+        </div>
+    </div>
+
+    <script>
+        /* JavaScript: Core Logic */
+
+        // 1. First Character Uppercase Check
+        function testUppercase() {
+            const str = document.getElementById('caseInput').value;
+            const res = document.getElementById('caseRes');
+            
+            if (!str) return;
+
+            // Regex: ^[A-Z] checks if the start of the string is A through Z
+            if (/^[A-Z]/.test(str)) {
+                res.innerHTML = "✅ First character is uppercase.";
+                res.style.color = "#27ae60";
+            } else {
+                res.innerHTML = "❌ First character is lowercase/symbol.";
+                res.style.color = "#e74c3c";
+            }
+        }
+
+        // 2. Email Address Matching Pattern
+        function testEmail() {
+            const email = document.getElementById('emailInput').value;
+            const res = document.getElementById('emailRes');
+            
+            // Standard email pattern
+            const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (pattern.test(email)) {
+                res.innerHTML = "✅ Valid email format.";
+                res.style.color = "#27ae60";
+            } else {
+                res.innerHTML = "❌ Invalid email format.";
+                res.style.color = "#e74c3c";
+            }
+        }
+
+        // 3. Thousands Separator Function
+        function testFormat() {
+            const num = document.getElementById('numInput').value;
+            const res = document.getElementById('numRes');
+
+            if (num === "") return;
+
+            // The 'toLocaleString' method automatically adds commas 
+            // based on standard language formatting (en-US uses commas)
+            const formatted = Number(num).toLocaleString('en-US');
+            res.innerHTML = "Output: <strong>" + formatted + "</strong>";
+            res.style.color = "#2d3436";
+        }
+    </script>
+
+</body>
+</html>
